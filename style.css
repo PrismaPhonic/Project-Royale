@@ -1,7 +1,40 @@
-.jumbotron.jumbotron-fluid {
+#hero {
   width: 100%;
   height: 100%;
-  background-image: url('images/background-1.jpg');
+  background: linear-gradient(#859a9f00, #859a9fc9), url('images/background-1.jpg') no-repeat center;
   background-size: cover;
-  background-position: center;
+}
+
+#music {
+  background: linear-gradient(#e2ebe8a6, #e2ebe88e), url('images/background-3.jpg') no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+
+
+#player {
+  background-color: #060606;
+  box-shadow: 4px 4px 1px -1px #1a1a1a;
+  height: 160px;
+  width: 800px;
+  border-radius: 1em;
+}
+
+.jumbotron {
+  margin-bottom: 0;
+}
+
+iframe {
+  display: block;
+}
+
+h1 {
+  display: block;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
 }
