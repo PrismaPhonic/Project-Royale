@@ -6,68 +6,93 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Project Royale</title>
   <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/lux/bootstrap.min.css" rel="stylesheet" integrity="sha384-ML9h/UCooefre72ZPxxOHyjbrLT1xKV0AHON1J+OlOV2iwcYemqmWyMfTcfyzLJ1" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.2/fullpage.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-9ralMzdK1QYsk4yBY680hmsb4/hJ98xK3w0TIaJ3ll4POWpWUYaA2bRjGGujGT8w" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-5">
-    <a class="navbar-brand" href="#">Project Royale</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Tour Dates</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#music">Music</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <section class="jumbotron jumbotron-fluid mb-0" id="hero">
-    <div class="container py-5">
-     <div class="row justify-content-center text-center">
-      <div class="col-md-10 col-lg-6">
-       <h1 class="m-5">We are Project Royale</h1>
-       <p class="lead">
-        <a class="btn btn-primary btn-md" href="#music" role="button">Listen</a>
-       </p>
-      </div>
-     </div>
-    </div>
-  </section>
-
-  <section class="jumbotron jumbotron-fluid" id="music">
-    <div class="container py-5">
-      <div class="row justify-content-center align-items-center text-center p-3">
-        <div class="col justify-content-center align-items-center">
-            <h1 class="m-5" style="font-weight: 900;">New Music</h1>
-            <iframe src="https://open.spotify.com/embed/track/1Jxjm65uCJJwuooONDlWGX" width="400" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" class="mb-3"></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="jumbotron jumbotron-fluid" id="about">
-      <div class="container py-5">
-        <div class="row justify-content-center align-items-center text-center p-3">
-          <div class="col justify-content-center align-items-center">
-              <h1 class="m-5" style="font-weight: 900;">About Us</h1>
-              <iframe src="https://open.spotify.com/embed/track/1Jxjm65uCJJwuooONDlWGX" width="400" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" class="mb-3"></iframe>
+  <div id="fullpage">
+      <nav class="navbar fixed-top navbar-expand-lg px-5">
+          <a class="navbar-brand" href="#">Project Royale</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#" id="hero-link">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href=# id="video-link">Video</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="music-link">Music</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="about-link">About</a>
+              </li>
+            </ul>
           </div>
-        </div>
-      </div>
-    </section>
+        </nav>
+      
+        <section class="jumbotron jumbotron-fluid mb-0 section-1" id="hero">
+          <div class="container py-5">
+           <div class="flex-col">
+             <h1 class="m-5">We are Project Royale</h1>
+             <p class="lead">
+              <a class="btn btn-primary btn-md" href="#" role="button">Listen</a>
+             </p>
+           </div>
+          </div>
+        </section>
 
+        <section class="section-2" id="video">
+            <div id="video-placeholder"></div>
+            <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iWxZiuTX_h4?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&list=PLJoF4X1oKw5O0qGE4N7lV2tw6ysXKYFsF" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+            <div class="volume">
+              <i class="fal fa-volume-slash"></i>
+            </div>
+          </section>            
+      
+        <section class="jumbotron jumbotron-fluid mb-0 section-2" id="music">
+          <div class="container py-5">
+              <div class="flex-col">
+                <h1 class="m-5" style="font-weight: 900;">New Music</h1>
+                <!-- <iframe src="https://open.spotify.com/embed/track/1Jxjm65uCJJwuooONDlWGX&view=coverart" width="400" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" class="mb-3"></iframe> -->
+                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/302146777&color=%234f4d60&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+              </div>
+          </div>
+        </section>
+      
+        <section class="jumbotron jumbotron-fluid section-3" id="about">
+            <div class="container py-5">
+              <div class="row justify-content-center align-items-center text-center p-3">
+                <div class="card text-white bg-dark mb-3">
+                  <div class="card-header text-white">
+                    <h1 class="m-3" style="font-weight: 900;">About Us</h1>
+                  </div>
+                    <div class="card-body">
+                      <div class="card-text">
+                        <p>
+                          ROYALE is the new project from label head Peter Farr and singer Annie Jacobsen who released their groundbreaking future garage single “Eternal” on Chillage Records. Chillage’s label head, Peter Farr's alias Urple Eeple’s latest offering, “Lost in Motion” EP received critical acclaim from Mixmag, Nest HQ, The 405, Purple Sneakers and YourEDM and included groundbreaking remixes from Pixelord, Sweatson Klank, and Conrad Clifton. 
+                          <br><br>
+                          As Seapora, Jacobsen’s last album “Seapop” featured work by a slew of talented producers, including Spoken Bird and Elevated Mind. She worked early on in her career with Alex Blue and Jay Wiltzen who would later go on to form the dynamic electronic duo BLU J, known well for their official ODESZA remix
+                        </p>
+                      </div>
+      
+                    </div>
+                </div>
+              </div>
+            </div>
+          </section>
+  </div>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
-  <script src="script.js"></script>
+  <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.2/fullpage.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="/static/script.js"></script>
 </body>
 </html>
