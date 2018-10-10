@@ -6,7 +6,7 @@ function scrollToSection(selector) {
 };
 
 // YOUTUBE JAVASCRIPT CONTROL
-const player;
+let player;
 
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('video-placeholder', {
