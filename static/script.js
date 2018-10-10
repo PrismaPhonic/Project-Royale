@@ -1,4 +1,3 @@
-
 // UTILITY FUNCTIONS
 function scrollToSection(selector) {
   $('html, body').animate({
@@ -7,7 +6,7 @@ function scrollToSection(selector) {
 };
 
 // YOUTUBE JAVASCRIPT CONTROL
-var player;
+const player;
 
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('video-placeholder', {
@@ -18,11 +17,9 @@ function onYouTubeIframeAPIReady() {
       color: 'white',
       autoplay: 1,
       controls: 0,
-      // loopPlaylists: true,
-      // playlist: 'PLJoF4X1oKw5O0qGE4N7lV2tw6ysXKYFsF'
     },
     events: {
-      onReady: onPlayerReady,
+      onReady: () => event.target.playVideo(),
       onStateChange: function (e) {
         if (e.data === YT.PlayerState.ENDED) {
           player.playVideo();
@@ -30,16 +27,6 @@ function onYouTubeIframeAPIReady() {
       },
     }
   });
-}
-
-function onPlayerReady() {
-  event.target.playVideo();
-}
-
-function onStateChange(e) {
-  if (e.data === YT.PlayerState.ENDED) {
-    player.playVideo();
-  }
 }
 
 // JQUERY ON DOCUMENT LOAD
