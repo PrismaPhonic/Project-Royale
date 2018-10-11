@@ -5,6 +5,10 @@ function scrollToSection(selector) {
   }, 1500);
 };
 
+function toggleMuteIcon() {
+  $('.fal').toggleClass('fa-volume-up fa-volume-slash')
+}
+
 // YOUTUBE JAVASCRIPT CONTROL
 let player;
 
@@ -50,10 +54,10 @@ $(document).ready(function () {
   $('.volume').on('click', function () {
     if (player.isMuted()) {
       player.unMute();
-      $('.fal.fa-volume-up').toggleClass('fa-volume-up fa-volume-slash')
+      toggleMuteIcon();
     } else {
       player.mute();
-      $('.fal.fa-volume-slash').toggleClass('fa-volume-slash fa-volume-up')
+      toggleMuteIcon();
     }
 
   })
