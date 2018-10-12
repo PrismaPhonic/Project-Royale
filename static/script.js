@@ -80,11 +80,11 @@ $(document).ready(function () {
 
   // HANDLE MUTING VIDEO ELEGANTLY
   $('.volume').on('click', function () {
-    if (window.player.isMuted()) {
-      window.player.unMute();
+    if (player.isMuted()) {
+      player.unMute();
       toggleMuteIcon();
     } else {
-      window.player.mute();
+      player.mute();
       toggleMuteIcon();
     }
   })
