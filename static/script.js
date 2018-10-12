@@ -39,8 +39,7 @@ $(document).ready(function () {
         },
       }
     });
-  })
-
+  });
 
   // EVENT HANDLERS
   // NAVBAR LINK SCROLLING ANIMATION
@@ -65,6 +64,5 @@ $(document).ready(function () {
       window.player.mute();
       toggleMuteIcon();
     }
-
   })
 });

@@ -121,3 +121,9 @@ h1 {
 .volume:hover {
   color: white;
 }
+
+/* HANDLE SOCIAL ICONS */
+
+.row .fab {
+  font-size: 1.5em;
+}
