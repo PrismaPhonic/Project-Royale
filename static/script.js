@@ -9,7 +9,7 @@ function toggleMuteIcon() {
   $('.fal').toggleClass('fa-volume-up fa-volume-slash')
 }
 
-let player;
+var player;
 
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('video-placeholder', {
@@ -34,6 +34,13 @@ function onYouTubeIframeAPIReady() {
 
 // JQUERY ON DOCUMENT LOAD
 $(document).ready(function () {
+  // PROGRAMATICALLY ADD JQUERY API AFTER DOM LOADS
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = "https://www.youtube.com/iframe_api";
+
+  $("body").append(script);
+
   // EVENT HANDLERS
   // NAVBAR LINK SCROLLING ANIMATION
   $('.navbar-nav').on('click', 'a', function (event) {
