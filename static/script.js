@@ -12,29 +12,34 @@ function toggleMuteIcon() {
 // YOUTUBE JAVASCRIPT CONTROL
 let player;
 
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('video-placeholder', {
-    width: '100%',
-    height: '100%',
-    videoId: 'iWxZiuTX_h4',
-    playerVars: {
-      color: 'white',
-      autoplay: 1,
-      controls: 0,
-    },
-    events: {
-      onReady: (event) => event.target.playVideo(),
-      onStateChange: function (e) {
-        if (e.data === YT.PlayerState.ENDED) {
-          player.playVideo();
-        }
-      },
-    }
-  });
-}
+window.onYouTubeIframeAPIReady = function (callback) { callback() };
 
 // JQUERY ON DOCUMENT LOAD
 $(document).ready(function () {
+
+  //YOUTUBE CALLBACK ON DOM READY TO SPEED UP PAGE LOAD
+  window.onYoutubeIframeAPIReady(function () {
+    window.player = new YT.Player('video-placeholder', {
+      width: '100%',
+      height: '100%',
+      videoId: 'iWxZiuTX_h4',
+      playerVars: {
+        color: 'white',
+        autoplay: 1,
+        controls: 0,
+      },
+      events: {
+        onReady: (event) => event.target.playVideo(),
+        onStateChange: function (e) {
+          if (e.data === YT.PlayerState.ENDED) {
+            window.player.playVideo();
+          }
+        },
+      }
+    });
+  })
+
+
   // EVENT HANDLERS
   // NAVBAR LINK SCROLLING ANIMATION
   $('.navbar-nav').on('click', 'a', function (event) {
@@ -51,11 +56,11 @@ $(document).ready(function () {
 
   // HANDLE MUTING VIDEO ELEGANTLY
   $('.volume').on('click', function () {
-    if (player.isMuted()) {
-      player.unMute();
+    if (window.player.isMuted()) {
+      window.player.unMute();
       toggleMuteIcon();
     } else {
-      player.mute();
+      window.player.mute();
       toggleMuteIcon();
     }
 
