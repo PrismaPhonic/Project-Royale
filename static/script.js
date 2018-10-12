@@ -37,7 +37,7 @@ function onYoutubeIframeAPIReady() {
       },
     }
   });
-});
+}
 
 // JQUERY ON DOCUMENT LOAD
 $(document).ready(function () {
