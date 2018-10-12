@@ -20,7 +20,7 @@ $(document).ready(function () {
       videoId: 'iWxZiuTX_h4',
       playerVars: {
         color: 'white',
-        autoplay: 1,
+        // autoplay: 1,
         controls: 0,
       },
       events: {
