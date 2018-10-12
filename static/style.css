@@ -127,3 +127,7 @@ h1 {
 .row .fab {
   font-size: 1.5em;
 }
+
+.row .fab:hover {
+  text-decoration: none;
+}
