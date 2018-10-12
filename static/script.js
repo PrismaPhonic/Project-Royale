@@ -10,9 +10,11 @@ function toggleMuteIcon() {
 }
 
 // YOUTUBE JAVASCRIPT CONTROL
-let player;
+let window.player;
 
-window.onYouTubeIframeAPIReady = function (callback) { callback() };
+window.onYouTubeIframeAPIReady = function (callback) {
+  callback();
+};
 
 // JQUERY ON DOCUMENT LOAD
 $(document).ready(function () {
