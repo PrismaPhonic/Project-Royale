@@ -3,7 +3,7 @@ function scrollToSection(selector) {
   $('html, body').animate({
     scrollTop: $(selector).offset().top
   }, 1500);
-};
+}
 
 function toggleMuteIcon() {
   $('.fal').toggleClass('fa-volume-up fa-volume-slash')
@@ -11,7 +11,7 @@ function toggleMuteIcon() {
 
 let player;
 
-function onYoutubeIframeAPIReady() {
+function onYouTubeIframeAPIReady() {
   player = new YT.Player('video-placeholder', {
     width: '100%',
     height: '100%',
