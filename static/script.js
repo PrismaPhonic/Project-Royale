@@ -41,6 +41,12 @@ $(document).ready(function () {
 
   $("body").append(script);
 
+  // PLAY VIDEO ON SCROLL
+  var hasPlayed = false;
+  $(window).on('scroll', function () {
+    player.playVideo()
+  })
+
   // EVENT HANDLERS
   // NAVBAR LINK SCROLLING ANIMATION
   $('.navbar-nav').on('click', 'a', function (event) {
