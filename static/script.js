@@ -10,7 +10,7 @@ function toggleMuteIcon() {
 }
 
 // YOUTUBE JAVASCRIPT CONTROL
-let window.player;
+window.player = undefined;
 
 window.onYouTubeIframeAPIReady = function (callback) {
   callback();
