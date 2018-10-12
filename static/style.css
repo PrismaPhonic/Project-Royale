@@ -131,3 +131,9 @@ h1 {
 .row .fab:hover {
   text-decoration: none;
 }
+
+@media only screen {
+  .volume {
+    display: hidden;
+  }
+}
