@@ -44,7 +44,10 @@ $(document).ready(function () {
   // PLAY VIDEO ON SCROLL
   var hasPlayed = false;
   $(window).on('scroll', function () {
-    player.playVideo()
+    if (!hasPlayed) {
+      player.playVideo();
+      hasPlayed = true;
+    }
   })
 
   // EVENT HANDLERS
