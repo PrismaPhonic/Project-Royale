@@ -47,15 +47,6 @@ $(document).ready(function () {
 
   $("#music .flex-col").append($spotifyIframe);
 
-  // PLAY VIDEO ON SCROLL
-  var hasPlayed = false;
-  $(window).on('scroll', function () {
-    if (!hasPlayed) {
-      player.playVideo();
-      hasPlayed = true;
-    }
-  })
-
   // EVENT HANDLERS
   // NAVBAR LINK SCROLLING ANIMATION
   $('.navbar-nav').on('click', 'a', function (event) {
@@ -71,14 +62,17 @@ $(document).ready(function () {
   });
 
   // VIDEO PLAYER EVENT HANDLERS
+  // PLAY VIDEO ON SCROLL
+  var hasPlayed = false;
+  $(window).on('scroll', function () {
+    if (!hasPlayed) {
+      player.playVideo();
+      hasPlayed = true;
+    }
+  })
 
   // HANDLE MUTING VIDEO ELEGANTLY
-  let firstClick = false;
   $('.volume').on('click', function () {
-    if (!firstClick) {
-      $('#video p').hide();
-      firstClick = true;
-    }
     if (player.isMuted()) {
       player.unMute();
       toggleMuteIcon();
