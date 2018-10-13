@@ -43,9 +43,9 @@ $(document).ready(function () {
 
   // PROGRAMATICALLY ADD SPOTIFY IFRAME AFTER DOM LOADS
   let spotifyString = `<iframe src="https://open.spotify.com/embed/track/4aCgtybHFjKVyuKrIilKWp" style="border: 0; width: 100%; height: 380px;" allowfullscreen></iframe>`;
-  let $spotifyIframe = $(spotifyString);
+  let $spotifyIframe = $.parseHTML(spotifyString);
 
-  $("#music flex-col").append(spotifyString);
+  $("#music flex-col").append($spotifyIframe);
 
   // PLAY VIDEO ON SCROLL
   var hasPlayed = false;
