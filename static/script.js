@@ -1,39 +1,39 @@
+// UTILITY FUNCTIONS
+function scrollToSection(selector) {
+  $('html, body').animate({
+    scrollTop: $(selector).offset().top
+  }, 1500);
+}
+
+function toggleMuteIcon() {
+  $('.fal').toggleClass('fa-volume-up fa-volume-slash')
+}
+
+var player;
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('video-placeholder', {
+    width: '100%',
+    height: '100%',
+    videoId: 'iWxZiuTX_h4',
+    playerVars: {
+      color: 'white',
+      // autoplay: 1,
+      controls: 0,
+    },
+    events: {
+      // onReady: (event) => event.target.playVideo(),
+      onStateChange: function (e) {
+        if (e.data === YT.PlayerState.ENDED) {
+          player.playVideo();
+        }
+      },
+    }
+  });
+}
+
 // JQUERY ON DOCUMENT LOAD
 $(document).ready(function () {
-  // UTILITY FUNCTIONS
-  function scrollToSection(selector) {
-    $('html, body').animate({
-      scrollTop: $(selector).offset().top
-    }, 1500);
-  }
-
-  function toggleMuteIcon() {
-    $('.fal').toggleClass('fa-volume-up fa-volume-slash')
-  }
-
-  var player;
-
-  function onYouTubeIframeAPIReady() {
-    player = new YT.Player('video-placeholder', {
-      width: '100%',
-      height: '100%',
-      videoId: 'iWxZiuTX_h4',
-      playerVars: {
-        color: 'white',
-        // autoplay: 1,
-        controls: 0,
-      },
-      events: {
-        // onReady: (event) => event.target.playVideo(),
-        onStateChange: function (e) {
-          if (e.data === YT.PlayerState.ENDED) {
-            player.playVideo();
-          }
-        },
-      }
-    });
-  }
-
   // PROGRAMATICALLY ADD JQUERY API AFTER DOM LOADS
   var script = document.createElement('script');
   script.type = 'text/javascript';
@@ -45,7 +45,7 @@ $(document).ready(function () {
   let spotifyString = `<iframe src="https://open.spotify.com/embed/track/4aCgtybHFjKVyuKrIilKWp" style="border: 0; width: 100%; height: 380px;" allowfullscreen></iframe>`;
   let $spotifyIframe = $.parseHTML(spotifyString);
 
-  $("#music flex-col").append($spotifyIframe);
+  $("#music .flex-col").append($spotifyIframe);
 
   // PLAY VIDEO ON SCROLL
   var hasPlayed = false;
