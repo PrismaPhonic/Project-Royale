@@ -76,7 +76,7 @@ $(document).ready(function () {
   let firstClick = false;
   $('.volume').on('click', function () {
     if (!firstClicked) {
-      $('.volume p').hide();
+      $('#video p').hide();
       firstClick = true;
     }
     if (player.isMuted()) {
