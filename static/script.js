@@ -75,7 +75,7 @@ $(document).ready(function () {
   // HANDLE MUTING VIDEO ELEGANTLY
   let firstClick = false;
   $('.volume').on('click', function () {
-    if (!firstClicked) {
+    if (!firstClick) {
       $('#video p').hide();
       firstClick = true;
     }
