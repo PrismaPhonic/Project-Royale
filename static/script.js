@@ -70,6 +70,13 @@ $(document).ready(function () {
     scrollToSection('#music')
   });
 
+  // VIDEO PLAYER EVENT HANDLERS
+
+  // INITIAL UNMUTE HELPFUL TEXT, HIDE ON CLICK
+  $('#music .lead').on('click', function (event) {
+    $(event.target).hide();
+  })
+
   // HANDLE MUTING VIDEO ELEGANTLY
   $('.volume').on('click', function () {
     if (player.isMuted()) {
