@@ -72,13 +72,13 @@ $(document).ready(function () {
 
   // VIDEO PLAYER EVENT HANDLERS
 
-  // INITIAL UNMUTE HELPFUL TEXT, HIDE ON CLICK
-  $('#music .lead').on('click', function (event) {
-    $(event.target).hide();
-  })
-
   // HANDLE MUTING VIDEO ELEGANTLY
+  let firstClick = false;
   $('.volume').on('click', function () {
+    if (!firstClicked) {
+      $('.volume p').hide();
+      firstClick = true;
+    }
     if (player.isMuted()) {
       player.unMute();
       toggleMuteIcon();
