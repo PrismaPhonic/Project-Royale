@@ -18,8 +18,8 @@ function onYouTubeIframeAPIReady() {
     videoId: 'iWxZiuTX_h4',
     playerVars: {
       color: 'white',
-      // autoplay: 1,
       controls: 0,
+      mute: 1
     },
     events: {
       // onReady: (event) => event.target.playVideo(),
